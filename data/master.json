@@ -1,0 +1,45 @@
+{
+  "vendors": [
+    {
+      "vendor_id": "V100",
+      "name": "Acme Fasteners",
+      "terms": "Net 30. FOB destination, freight prepaid by vendor: freight is not billable to us.",
+      "price_tolerance_bps": 100
+    },
+    {
+      "vendor_id": "V200",
+      "name": "Northwind Industrial",
+      "terms": "Net 45. FOB origin, freight collect.",
+      "price_tolerance_bps": 0
+    }
+  ],
+  "contract_prices": [
+    {"vendor_id": "V100", "sku": "W-100", "unit_price_cents": 1200, "effective_from": "2026-01-01", "effective_to": null},
+    {"vendor_id": "V100", "sku": "W-110", "unit_price_cents": 800, "effective_from": "2026-01-01", "effective_to": "2026-08-31"},
+    {"vendor_id": "V100", "sku": "W-110", "unit_price_cents": 860, "effective_from": "2026-09-01", "effective_to": null},
+    {"vendor_id": "V100", "sku": "P-500", "unit_price_cents": 3000, "effective_from": "2026-01-01", "effective_to": null},
+    {"vendor_id": "V100", "sku": "C-600", "unit_price_cents": 1500, "effective_from": "2026-01-01", "effective_to": null},
+    {"vendor_id": "V200", "sku": "G-300", "unit_price_cents": 2500, "effective_from": "2026-01-01", "effective_to": null},
+    {"vendor_id": "V200", "sku": "B-400", "unit_price_cents": 450, "effective_from": "2026-01-01", "effective_to": null},
+    {"vendor_id": "V200", "sku": "H-410", "unit_price_cents": 1000, "effective_from": "2026-01-01", "effective_to": null},
+    {"vendor_id": "V200", "sku": "W-200", "unit_price_cents": 1800, "effective_from": "2026-01-01", "effective_to": null},
+    {"vendor_id": "V200", "sku": "T-900", "unit_price_cents": 12000, "effective_from": "2026-01-01", "effective_to": null}
+  ],
+  "receipts": [
+    {"po_number": "PO-5001", "sku": "W-100", "qty_received": 200, "received_at": "2026-08-07", "note": ""},
+    {"po_number": "PO-5002", "sku": "W-110", "qty_received": 100, "received_at": "2026-09-08", "note": ""},
+    {"po_number": "PO-5003", "sku": "G-300", "qty_received": 40, "received_at": "2026-09-03", "note": ""},
+    {"po_number": "PO-5004", "sku": "B-400", "qty_received": 80, "received_at": "2026-09-08", "note": ""},
+    {"po_number": "PO-5004", "sku": "H-410", "qty_received": 50, "received_at": "2026-09-08", "note": ""},
+    {"po_number": "PO-5005", "sku": "P-500", "qty_received": 50, "received_at": "2026-09-07", "note": "6 units arrived with cracked housings; rejected at dock and quarantined for vendor pickup. RMA 88213 requested."},
+    {"po_number": "PO-5006", "sku": "C-600", "qty_received": 20, "received_at": "2026-09-09", "note": ""},
+    {"po_number": "PO-5008", "sku": "W-200B", "qty_received": 30, "received_at": "2026-09-12", "note": "Received W-200B in place of W-200. Accepted as an approved equivalent per buyer R. Ahmed."},
+    {"po_number": "PO-5009", "sku": "T-900", "qty_received": 10, "received_at": "2026-09-14", "note": ""}
+  ],
+  "vendor_notes": [
+    {"vendor_id": "V100", "noted_at": "2026-08-25", "author": "procurement", "note": "Price increase on W-110 to $8.60/EA effective 2026-09-01 approved; contract amended. Open POs were not re-issued."},
+    {"vendor_id": "V100", "noted_at": "2026-06-02", "author": "ap", "note": "Acme occasionally adds freight lines to invoices. Per terms these are not payable; deduct and notify."},
+    {"vendor_id": "V200", "noted_at": "2026-07-14", "author": "procurement", "note": "W-200B is an approved drop-in equivalent of W-200 at the same price."},
+    {"vendor_id": "V200", "noted_at": "2026-05-30", "author": "procurement", "note": "T-900 is ordered by the case (CS); one case is 12 EA. Northwind's billing system invoices T-900 per each (EA)."}
+  ]
+}

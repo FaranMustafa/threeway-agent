@@ -1,0 +1,42 @@
+[project]
+name = "threeway-agent"
+version = "0.1.0"
+description = "An AI agent that investigates and resolves EDI three-way-match exceptions (PO 850 / ASN 856 / Invoice 810) in accounts payable, with deterministic guardrails and human approval."
+readme = "README.md"
+authors = [
+    { name = "Syed Faran Mustafa", email = "fmustafa044@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=2.3.0",
+    "fastapi>=0.162.0",
+    "pydantic>=2.14.2",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.scripts]
+threeway = "threeway.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.11.26,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "threeway"
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.2.0",
+    "ruff>=0.17.3",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
